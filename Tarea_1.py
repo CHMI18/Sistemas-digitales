@@ -11,7 +11,6 @@ def float_check(x):
     else:
         return False
 
-
 #Divide de forma recursiva para encontrar la representación en base b de un número de base 10
 
 def dividir_por(num, b):
@@ -22,7 +21,6 @@ def dividir_por(num, b):
         parte_entera = int(num/b)
         x = [resto]
         return x.extend(dividir_por(parte_entera, b))
-
 
 def num_a_base_10(x, A):
     if float_check(x):
