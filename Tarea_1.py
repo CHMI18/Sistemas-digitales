@@ -16,7 +16,7 @@ def float_check(x):
 
 def dividir_por(num, b):
     if num < b:
-        return num
+        return [num]
     else:
         resto = num % b
         parte_entera = int(num/b)
