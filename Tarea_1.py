@@ -15,17 +15,39 @@ def float_check(x):
 
 def dividir_por(num, b):
     if num < b:
-        return num
+        return [num]
     else:
         resto = num % b
         parte_entera = int(num/b)
         x = [resto]
         return x.extend(dividir_por(parte_entera, b))
 
+<<<<<<< HEAD
 def num_a_base_10(x, A):
     if float_check(x):
         pass
+=======
 
+#Obtiene un número num con base a, devuelve un número equivalente en base 10
+def base10(num, a):
+    if float_check(num):
+        num = str(num)
+        num = num.split('.')
+        entero, decimal = num[0], num[1]
+        total = 0
+        for i in range(len(entero)):
+            total += num[-(i + 1)] * (a**i)
+>>>>>>> cfe5ce168981468225865f7c5f27b2f5692cbcc4
+
+        for i in range(len(decimal)):
+            total += num[i] * (a**(-(i + 1)))
+        return total
+        
     else:
-        pass
-    
+        num = str(num)
+        total = 0
+        for i in range(len(num)):
+            total += num[-(i + 1)] * (a**i)
+        return total
+            
+            
